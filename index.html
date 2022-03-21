@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        p {
+            padding: 30px 30px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #white {
+            background-color: white;
+
+        }
+
+        #aqua {
+            background-color: aqua;
+
+        }
+
+        #violet {
+            background-color: violet;
+
+        }
+
+        #black {
+            background-color: black;
+        }
+
+        #color-switcher {
+            text-align: right;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#FFFFFF')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#00FFFF')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#8F00FF')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="images.jfif" alt="">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis corrupti aperiam pariatur rem optio
+        quam illo? Impedit natus non ullam laudantium iste rem quis eligendi quia minima tenetur culpa quo velit
+        expedita placeat modi, et sint dignissimos earum sit incidunt explicabo ipsum sapiente cumque ut? Nisi, facere
+        hic quasi soluta, repellat tempore consectetur consequatur inventore cupiditate in aperiam! Minus tempore aut
+        possimus repudiandae. Voluptate autem libero nemo hic eum nobis laudantium perspiciatis voluptas suscipit amet,
+        nam corrupti voluptatibus, explicabo impedit. Rerum illum facere reiciendis ab, dolore ullam earum harum quidem
+        sequi doloribus.
+    </p>
+    <script>
+        function changeBG(color) {
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+
+            if (color == "#000000") {
+                for (let elm of txt) {
+                    elm.style.color = "white";
+                }
+            } else {
+                for (let elm of txt) {
+                    elm.style.color = "black";
+                }
+            }
+            
+            
+        }
+    </script>
+</body>
+
+</html>
